@@ -21,8 +21,6 @@ const debug = (obj) => querystring.stringify(Object.entries(obj).reduce((acc, [k
 });
 
 export default (app, provider) => {
-  const { constructor: { errors: { SessionNotFound } } } = provider;
-
   app.use((req, res, next) => {
     const orig = res.render;
     // you'll probably want to use a full blown render engine capable of layouts
@@ -166,9 +164,9 @@ export default (app, provider) => {
   });
 
   app.use((err, req, res, next) => {
-    if (err instanceof SessionNotFound) {
-      // handle interaction expired / session not found error
-    }
+    // if (err instanceof SessionNotFound) {
+    //   // handle interaction expired / session not found error
+    // }
     next(err);
   });
 };
