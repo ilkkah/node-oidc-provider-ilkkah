@@ -1,5 +1,5 @@
 {
-  "name": "oidc-provider",
+  "name": "oidc-provider-ilkkah",
   "version": "8.2.1",
   "description": "OAuth 2.0 Authorization Server implementation for Node.js with OpenID Connect",
   "keywords": [
